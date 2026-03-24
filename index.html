@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>தமிழ் புலிகள் கட்சி | Tamil Puligal Katchi</title>
+  <meta name="description" content="Tamil Puligal Katchi - சமத்துவமே நமது இலக்கு. A movement for social justice, equality, and the rights of the oppressed people of Tamil Nadu." />
+  <meta name="keywords" content="Tamil Puligal Katchi, Nagai Thiruvalluvan, Social Justice Tamil Nadu, Dalit rights Tamil Nadu, Dravidian ideology" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======== LOADING SCREEN ======== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-star">&#9733;</div>
+      <div class="loader-text">தமிழ் புலிகள் கட்சி</div>
+    </div>
+  </div>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="brand-flag">
+          <span class="brand-star">&#9733;</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-tamil">தமிழ் புலிகள் கட்சி</span>
+          <span class="brand-english">Tamil Puligal Katchi</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">முகப்பு<span>Home</span></a></li>
+        <li><a href="#ideology" class="nav-link" data-section="ideology">சித்தாந்தம்<span>Ideology</span></a></li>
+        <li><a href="#leadership" class="nav-link" data-section="leadership">தலைமை<span>Leadership</span></a></li>
+        <li><a href="#wings" class="nav-link" data-section="wings">அணிகள்<span>Wings</span></a></li>
+        <li><a href="#events" class="nav-link" data-section="events">நிகழ்வுகள்<span>Events</span></a></li>
+        <li><a href="#media" class="nav-link" data-section="media">ஊடகம்<span>Media</span></a></li>
+        <li><a href="#join" class="nav-link nav-cta" data-section="join">சேரு<span>Join Us</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== NEWS TICKER ======== -->
+  <div class="news-ticker">
+    <span class="ticker-label"><i class="fas fa-newspaper"></i> செய்திகள்</span>
+    <div class="ticker-wrapper">
+      <div class="ticker-content" id="tickerContent">
+        <span>🔴 தமிழ் புலிகள் கட்சியின் கருூர் மாநாடு – பிப்ரவரி 8, 2026 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>🔴 Karur Grand Conference – February 8, 2026 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>🔴 நாகை திருவள்ளுவன் சென்னையில் மக்கள் சந்திப்பு நடத்தினார் &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>🔴 District-wise membership drive crosses 1 lakh mark &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>🔴 சாதி ஒழிப்பு கூட்டம் – மதுரை, திருச்சி, கோவை &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>🔴 Party demands OBC sub-categorisation in Tamil Nadu &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section id="home" class="hero">
+    <div class="hero-slideshow" id="heroSlideshow">
+      <div class="hero-slide active" style="background: linear-gradient(135deg, #0a1628 0%, #1a237e 50%, #0d47a1 100%);">
+        <div class="hero-slide-overlay"></div>
+        <div class="slide-crowd-art"></div>
+      </div>
+      <div class="hero-slide" style="background: linear-gradient(135deg, #1a0000 0%, #8b0000 50%, #c62828 100%);">
+        <div class="hero-slide-overlay"></div>
+        <div class="slide-crowd-art"></div>
+      </div>
+      <div class="hero-slide" style="background: linear-gradient(135deg, #0a1628 0%, #880e4f 50%, #1a237e 100%);">
+        <div class="hero-slide-overlay"></div>
+        <div class="slide-crowd-art"></div>
+      </div>
+    </div>
+
+    <!-- Floating flag particles -->
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content">
+      <div class="hero-flag-badge">
+        <div class="flag-icon-lg"><span>&#9733;</span></div>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-tamil" id="heroTamilText">வெல்லும் தமிழ்நாடு!</span>
+        <span class="hero-english">Winning Tamil Nadu!</span>
+      </h1>
+      <p class="hero-subtitle">சாதி ஒழிப்புக் களம் · சமூக நீதிப் பயணம் · உழைக்கும் மக்களின் உரிமைப் போர்</p>
+      <p class="hero-subtitle-en">The field of caste abolition · The journey of social justice · The rights war of the working people</p>
+      <div class="hero-ctas">
+        <a href="#join" class="btn btn-primary pulse-btn">
+          <i class="fas fa-fist-raised"></i> இயக்கத்தில் சேரு <span>Join the Movement</span>
+        </a>
+        <a href="#join" class="btn btn-secondary">
+          <i class="fas fa-heart"></i> நன்கொடை <span>Donate Now</span>
+        </a>
+        <a href="#ideology" class="btn btn-ghost">
+          <i class="fas fa-book-open"></i> சித்தாந்தம் <span>Our Ideology</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-slider-controls">
+      <button class="slide-dot active" onclick="goToSlide(0)"></button>
+      <button class="slide-dot" onclick="goToSlide(1)"></button>
+      <button class="slide-dot" onclick="goToSlide(2)"></button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>கீழே உருட்டுங்கள்</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ======== STATS BAND ======== -->
+  <section class="stats-band">
+    <div class="stats-container">
+      <div class="stat-item" data-count="32">
+        <div class="stat-number"><span class="count-up">32</span>+</div>
+        <div class="stat-label">மாவட்டங்கள் <span>Districts</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-count="100000">
+        <div class="stat-number"><span class="count-up">1</span>L+</div>
+        <div class="stat-label">உறுப்பினர்கள் <span>Members</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-count="5">
+        <div class="stat-number"><span class="count-up">5</span></div>
+        <div class="stat-label">அணிகள் <span>Wings</span></div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-count="2026">
+        <div class="stat-number"><span class="count-up">2026</span></div>
+        <div class="stat-label">தேர்தல் ஆண்டு <span>Election Year</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== IDEOLOGY SECTION ======== -->
+  <section id="ideology" class="ideology-section section">
+    <div class="ideology-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-badge"><i class="fas fa-book"></i> சித்தாந்தம்</span>
+        <h2 class="section-title">நம் மூன்று தூண்கள் <span>Our Three Pillars</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+        <p class="section-desc">சாதி ஒழிப்பு, பகுத்தறிவு, பொருளாதார சமத்துவம் என்ற மூன்று தூண்களில் நம் கட்சி நிற்கிறது.</p>
+      </div>
+
+      <div class="ideology-pillars">
+
+        <!-- Ambedkar -->
+        <div class="pillar-card" id="pillar-ambedkar">
+          <div class="pillar-portrait ambedkar-portrait">
+            <div class="portrait-circle">
+              <div class="portrait-inner ambedkar-art">
+                <div class="portrait-silhouette ambedkar-sil"></div>
+              </div>
+            </div>
+            <div class="pillar-number">01</div>
+          </div>
+          <div class="pillar-content">
+            <div class="pillar-icon ambedkar-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="pillar-name tamil">அம்பேத்கரியம்</h3>
+            <h3 class="pillar-name-en">Ambedkarism</h3>
+            <p class="pillar-quote">"Educate, Agitate, Organize"</p>
+            <p class="pillar-desc">சாதி ஒழிப்பு, அரசியலமைப்பு உரிமைகள், சமூக நீதிக்கான போராட்டம். டாக்டர் பாபாசாகேப் அம்பேத்கரின் தத்துவம் நமது அடித்தளம்.</p>
+            <p class="pillar-desc-en">Annihilation of caste, constitutional rights, and the fight for social justice. Dr. Babasaheb Ambedkar's philosophy is our foundation.</p>
+            <ul class="pillar-points">
+              <li><i class="fas fa-star"></i> சாதி ஒழிப்பு – Abolition of Caste</li>
+              <li><i class="fas fa-star"></i> தலித் உரிமைகள் – Dalit Rights</li>
+              <li><i class="fas fa-star"></i> அரசியலமைப்பு – Constitution First</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Periyar -->
+        <div class="pillar-card pillar-center" id="pillar-periyar">
+          <div class="pillar-portrait periyar-portrait">
+            <div class="portrait-circle">
+              <div class="portrait-inner periyar-art">
+                <div class="portrait-silhouette periyar-sil"></div>
+              </div>
+            </div>
+            <div class="pillar-number">02</div>
+          </div>
+          <div class="pillar-content">
+            <div class="pillar-icon periyar-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="pillar-name tamil">பெரியாரியம்</h3>
+            <h3 class="pillar-name-en">Periyarism</h3>
+            <p class="pillar-quote">"சுயமரியாதை" – Self-Respect</p>
+            <p class="pillar-desc">பகுத்தறிவு, திராவிட அடையாளம், மூடநம்பிக்கை எதிர்ப்பு. தந்தை பெரியாரின் சுயமரியாதை இயக்கம் நமது வழிகாட்டல்.</p>
+            <p class="pillar-desc-en">Rationalism, Dravidian identity, and anti-superstition principles. Periyar's Self-Respect Movement guides our path.</p>
+            <ul class="pillar-points">
+              <li><i class="fas fa-star"></i> பகுத்தறிவு – Rationalism</li>
+              <li><i class="fas fa-star"></i> திராவிட அடையாளம் – Dravidian Identity</li>
+              <li><i class="fas fa-star"></i> பெண் விடுதலை – Women's Liberation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Marx -->
+        <div class="pillar-card" id="pillar-marx">
+          <div class="pillar-portrait marx-portrait">
+            <div class="portrait-circle">
+              <div class="portrait-inner marx-art">
+                <div class="portrait-silhouette marx-sil"></div>
+              </div>
+            </div>
+            <div class="pillar-number">03</div>
+          </div>
+          <div class="pillar-content">
+            <div class="pillar-icon marx-icon">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3 class="pillar-name tamil">மார்க்சியம்</h3>
+            <h3 class="pillar-name-en">Marxism</h3>
+            <p class="pillar-quote">"Workers of the World, Unite!"</p>
+            <p class="pillar-desc">பொருளாதார சமத்துவம், தொழிலாளர் உரிமைகள், வறுமை ஒழிப்பு. கார்ல் மார்க்ஸின் சமத்துவக் கொள்கை நமது பொருளாதார நோக்கம்.</p>
+            <p class="pillar-desc-en">Economic equality, workers' rights, and poverty elimination. Karl Marx's principles of equality form our economic vision.</p>
+            <ul class="pillar-points">
+              <li><i class="fas fa-star"></i> தொழிலாளர் உரிமை – Workers' Rights</li>
+              <li><i class="fas fa-star"></i> பொருளாதார சமத்துவம் – Economic Equality</li>
+              <li><i class="fas fa-star"></i> வறுமை ஒழிப்பு – Poverty Elimination</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== LEADERSHIP SECTION ======== -->
+  <section id="leadership" class="leadership-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-users"></i> தலைமை</span>
+        <h2 class="section-title">நமது தலைவர்கள் <span>Our Leadership</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- President -->
+        <div class="leader-card president-card">
+          <div class="leader-badge">தலைவர் · President</div>
+          <div class="leader-avatar president-avatar">
+            <div class="avatar-circle">
+              <div class="avatar-initials">நதி</div>
+            </div>
+            <div class="leader-flag-ring"></div>
+          </div>
+          <div class="leader-info">
+            <h3 class="leader-name tamil">நாகை திருவள்ளுவன்</h3>
+            <h4 class="leader-name-en">Nagai Thiruvalluvan</h4>
+            <p class="leader-role">தமிழ் புலிகள் கட்சி – தலைவர்</p>
+            <div class="leader-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>"சாதி இல்லாத தமிழ்நாட்டை கட்டமைப்போம். A Tamil Nadu free from caste – that is our promise."</p>
+            </div>
+            <div class="leader-social">
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- District Secretaries -->
+        <div class="district-secretaries">
+          <h3 class="ds-title">மாவட்ட செயலாளர்கள் <span>District Secretaries</span></h3>
+          <div class="ds-grid">
+            <div class="ds-card">
+              <div class="ds-avatar"><span>சே</span></div>
+              <div class="ds-info">
+                <strong>சென்னை மாவட்டம்</strong>
+                <span>Chennai District</span>
+              </div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-avatar"><span>ம</span></div>
+              <div class="ds-info">
+                <strong>மதுரை மாவட்டம்</strong>
+                <span>Madurai District</span>
+              </div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-avatar"><span>தி</span></div>
+              <div class="ds-info">
+                <strong>திருச்சி மாவட்டம்</strong>
+                <span>Trichy District</span>
+              </div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-avatar"><span>கோ</span></div>
+              <div class="ds-info">
+                <strong>கோவை மாவட்டம்</strong>
+                <span>Coimbatore District</span>
+              </div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-avatar"><span>நா</span></div>
+              <div class="ds-info">
+                <strong>நாகை மாவட்டம்</strong>
+                <span>Nagapattinam District</span>
+              </div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-avatar"><span>ஈ</span></div>
+              <div class="ds-info">
+                <strong>ஈரோடு மாவட்டம்</strong>
+                <span>Erode District</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== WINGS SECTION ======== -->
+  <section id="wings" class="wings-section section">
+    <div class="wings-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-badge"><i class="fas fa-sitemap"></i> அணிகள்</span>
+        <h2 class="section-title">கட்சி அணிகள் <span>Party Wings</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+        <p class="section-desc">ஒவ்வொரு அணியும் ஒவ்வொரு சமூகப் பிரிவுக்காக போராடுகிறது.</p>
+      </div>
+
+      <div class="wings-grid">
+        <div class="wing-card">
+          <div class="wing-icon women-icon">
+            <i class="fas fa-venus"></i>
+          </div>
+          <h3 class="wing-name">மகளிர் அணி</h3>
+          <h4 class="wing-name-en">Women's Wing</h4>
+          <p class="wing-desc">பெண் அதிகாரம், வன்முறை எதிர்ப்பு, சம ஊதியம் என்று முன்னிலை தாங்குகிறோம்.</p>
+          <p class="wing-desc-en">Championing women's empowerment, anti-violence, and equal pay.</p>
+          <div class="wing-count"><i class="fas fa-users"></i> 25,000+ உறுப்பினர்கள்</div>
+          <a href="#join" class="wing-join-btn">சேர்க Join</a>
+        </div>
+
+        <div class="wing-card">
+          <div class="wing-icon youth-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="wing-name">இளைஞர் அணி</h3>
+          <h4 class="wing-name-en">Youth Wing</h4>
+          <p class="wing-desc">இளைஞர்களின் ஆற்றலை சமாதான மாற்றத்திற்கு பயன்படுத்துகிறோம்.</p>
+          <p class="wing-desc-en">Channeling the energy of youth for peaceful revolutionary change.</p>
+          <div class="wing-count"><i class="fas fa-users"></i> 30,000+ உறுப்பினர்கள்</div>
+          <a href="#join" class="wing-join-btn">சேர்க Join</a>
+        </div>
+
+        <div class="wing-card">
+          <div class="wing-icon student-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="wing-name">மாணவர் அணி</h3>
+          <h4 class="wing-name-en">Student Wing</h4>
+          <p class="wing-desc">கல்வி உரிமை, கலால் எதிர்ப்பு, மாணவர் நலன் என்று உழைக்கிறோம்.</p>
+          <p class="wing-desc-en">Fighting for education rights, fee reduction, and student welfare.</p>
+          <div class="wing-count"><i class="fas fa-users"></i> 20,000+ உறுப்பினர்கள்</div>
+          <a href="#join" class="wing-join-btn">சேர்க Join</a>
+        </div>
+
+        <div class="wing-card">
+          <div class="wing-icon labor-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3 class="wing-name">தொழிலாளர் அணி</h3>
+          <h4 class="wing-name-en">Labor Wing</h4>
+          <p class="wing-desc">உழைக்கும் மக்களின் உரிமைகளை நிலைநாட்டுகிறோம், சம ஊதியம் கோருகிறோம்.</p>
+          <p class="wing-desc-en">Standing up for workers' rights, fair wages, and safe working conditions.</p>
+          <div class="wing-count"><i class="fas fa-users"></i> 25,000+ உறுப்பினர்கள்</div>
+          <a href="#join" class="wing-join-btn">சேர்க Join</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== UPCOMING EVENTS ======== -->
+  <section id="events" class="events-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-calendar-star"></i> நிகழ்வுகள்</span>
+        <h2 class="section-title">வரவிருக்கும் நிகழ்வுகள் <span>Upcoming Events</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+      </div>
+
+      <div class="events-grid">
+        <!-- Featured Event -->
+        <div class="event-card event-featured">
+          <div class="event-badge featured-badge">
+            <i class="fas fa-star"></i> முக்கிய நிகழ்வு · FEATURED
+          </div>
+          <div class="event-date-block">
+            <span class="event-day">08</span>
+            <span class="event-month">FEB</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">கருூர் மாவட்ட மாநாடு</h3>
+            <h4 class="event-title-en">Karur District Grand Conference</h4>
+            <p class="event-desc">தமிழ் புலிகள் கட்சியின் வரலாற்று சிறப்புமிக்க மாவட்ட மாநாடு – கருூரில் ஆயிரக்கணக்கான தொண்டர்களுடன் நடைபெறும்.</p>
+            <p class="event-desc-en">Historic district conference with thousands of volunteers in Karur, Tamil Nadu.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> கருூர், தமிழ்நாடு</span>
+              <span><i class="fas fa-clock"></i> காலை 9:00 மணி</span>
+              <span><i class="fas fa-users"></i> 50,000+ எதிர்பார்க்கப்படுகிறது</span>
+            </div>
+          </div>
+          <div class="event-countdown" id="eventCountdown">
+            <div class="countdown-item"><span id="cDays">00</span><label>நாட்கள்</label></div>
+            <div class="countdown-item"><span id="cHours">00</span><label>மணிகள்</label></div>
+            <div class="countdown-item"><span id="cMins">00</span><label>நிமிடங்கள்</label></div>
+            <div class="countdown-item"><span id="cSecs">00</span><label>விநாடிகள்</label></div>
+          </div>
+          <a href="#join" class="btn btn-primary">பதிவு செய்யுங்கள் · Register</a>
+        </div>
+
+        <!-- Other Events -->
+        <div class="event-card">
+          <div class="event-date-block small">
+            <span class="event-day">15</span>
+            <span class="event-month">APR</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">அம்பேத்கர் ஜெயந்தி பேரணி</h3>
+            <h4 class="event-title-en">Ambedkar Jayanti Rally</h4>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> சென்னை மெரினா</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date-block small">
+            <span class="event-day">17</span>
+            <span class="event-month">SEP</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">பெரியார் ஜெயந்தி கூட்டம்</h3>
+            <h4 class="event-title-en">Periyar Jayanti Meeting</h4>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> ஈரோடு</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date-block small">
+            <span class="event-day">01</span>
+            <span class="event-month">MAY</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">தொழிலாளர் தினம்</h3>
+            <h4 class="event-title-en">International Workers' Day March</h4>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> மதுரை</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MEDIA SECTION ======== -->
+  <section id="media" class="media-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-photo-video"></i> ஊடகம்</span>
+        <h2 class="section-title">படிவங்கள் & கலைப்படைப்புகள் <span>Media & Gallery</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+      </div>
+
+      <!-- Video Placeholder -->
+      <div class="video-spotlight">
+        <div class="video-thumbnail" id="videoPlay">
+          <div class="video-overlay-art">
+            <div class="video-title-art">
+              <p>நாகை திருவள்ளுவன் – கருூர் மாநாட்டு உரை</p>
+              <p class="en">Nagai Thiruvalluvan – Karur Conference Speech</p>
+            </div>
+            <button class="play-btn" id="playBtn">
+              <i class="fas fa-play"></i>
+            </button>
+            <span class="video-duration">45:32</span>
+          </div>
+        </div>
+        <div class="video-info">
+          <h3>முதன்மை உரை · Featured Speech</h3>
+          <p>கருூர் மாவட்ட மாநாட்டில் தலைவரின் வரலாற்று சிறப்புமிக்க உரை. சாதி ஒழிப்பு, சமூக நீதி மற்றும் தொழிலாளர் உரிமைகள் குறித்து.</p>
+          <p class="en">The President's historic address at the Karur District Conference covering caste abolition, social justice, and workers' rights.</p>
+          <div class="video-stats">
+            <span><i class="fas fa-eye"></i> 2.4L பார்வைகள்</span>
+            <span><i class="fas fa-share-alt"></i> 18K shares</span>
+          </div>
+          <div class="share-bar">
+            <span>பகிரவும் · Share:</span>
+            <a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter/X</a>
+            <a href="#" class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      <div class="gallery-grid" id="gallery">
+        <div class="gallery-item gallery-large">
+          <div class="gallery-art g-art-1">
+            <div class="gallery-tag">போராட்டம் · Protest</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-art g-art-2">
+            <div class="gallery-tag">பேரணி · Rally</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-art g-art-3">
+            <div class="gallery-tag">கூட்டம் · Meeting</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-art g-art-4">
+            <div class="gallery-tag">நலத்திட்டம் · Welfare</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-art g-art-5">
+            <div class="gallery-tag">மாவட்டம் · District</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Downloads -->
+      <div class="downloads-section">
+        <h3 class="downloads-title"><i class="fas fa-download"></i> பதிவிறக்கங்கள் · Downloads</h3>
+        <div class="download-items">
+          <a href="#" class="download-item">
+            <i class="fas fa-flag"></i>
+            <span>கட்சி கொடி (HD) · Party Flag HD</span>
+            <span class="dl-size">2.4 MB PNG</span>
+          </a>
+          <a href="#" class="download-item">
+            <i class="fas fa-file-image"></i>
+            <span>கருூர் மாநாடு சுவரொட்டி · Conference Poster</span>
+            <span class="dl-size">4.1 MB PDF</span>
+          </a>
+          <a href="#" class="download-item">
+            <i class="fas fa-book"></i>
+            <span>கட்சி அறிக்கை · Party Manifesto</span>
+            <span class="dl-size">1.8 MB PDF</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== JOIN / DONATE SECTION ======== -->
+  <section id="join" class="join-section section">
+    <div class="join-bg-art"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-badge"><i class="fas fa-fist-raised"></i> இயக்கத்தில் சேரு</span>
+        <h2 class="section-title">மாற்றத்தின் ஒரு பகுதியாகுங்கள் <span>Be Part of the Change</span></h2>
+        <div class="section-divider"><span>&#9733;</span></div>
+      </div>
+
+      <div class="join-grid">
+        <!-- Membership Form -->
+        <div class="join-card membership-card">
+          <div class="join-card-header">
+            <i class="fas fa-id-card"></i>
+            <h3>உறுப்பினர் பதிவு <span>Membership</span></h3>
+          </div>
+          <form class="membership-form" id="membershipForm" onsubmit="submitMembership(event)">
+            <div class="form-group">
+              <label>பெயர் · Name *</label>
+              <input type="text" placeholder="உங்கள் பெயர் / Your Name" required />
+            </div>
+            <div class="form-group">
+              <label>மாவட்டம் · District *</label>
+              <select required>
+                <option value="">மாவட்டம் தேர்ந்தெடுக்கவும்</option>
+                <option>Chennai – சென்னை</option>
+                <option>Coimbatore – கோவை</option>
+                <option>Madurai – மதுரை</option>
+                <option>Trichy – திருச்சி</option>
+                <option>Salem – சேலம்</option>
+                <option>Erode – ஈரோடு</option>
+                <option>Karur – கருூர்</option>
+                <option>Nagapattinam – நாகை</option>
+                <option>Other – மற்றவை</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>துறை எண் · Booth No.</label>
+              <input type="text" placeholder="வாக்குப்பதிவு இல. / Booth No." />
+            </div>
+            <div class="form-group">
+              <label>கைபேசி · Phone *</label>
+              <div class="phone-input">
+                <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+                <button type="button" class="otp-btn" onclick="sendOTP()">OTP அனுப்பு</button>
+              </div>
+            </div>
+            <div class="form-group" id="otpGroup" style="display:none;">
+              <label>OTP சரிபார்ப்பு · OTP Verify</label>
+              <input type="text" placeholder="6-இலக்க OTP" maxlength="6" />
+            </div>
+            <div class="form-group">
+              <label>அணி · Wing (Optional)</label>
+              <select>
+                <option value="">அணி தேர்வு செய்யவும்</option>
+                <option>மகளிர் அணி – Women's Wing</option>
+                <option>இளைஞர் அணி – Youth Wing</option>
+                <option>மாணவர் அணி – Student Wing</option>
+                <option>தொழிலாளர் அணி – Labor Wing</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary full-btn">
+              <i class="fas fa-fist-raised"></i> இயக்கத்தில் சேரு · Join the Movement
+            </button>
+          </form>
+        </div>
+
+        <!-- Donation -->
+        <div class="join-card donation-card">
+          <div class="join-card-header">
+            <i class="fas fa-heart"></i>
+            <h3>நன்கொடை <span>Donate</span></h3>
+          </div>
+          <p class="donation-text">உங்கள் நன்கொடை சமூக நீதிப் போராட்டத்தை வலுப்படுத்துகிறது.</p>
+          <p class="donation-text-en">Your donation strengthens the fight for social justice.</p>
+
+          <div class="donation-qr-container" style="text-align: center; margin: 30px 0;">
+            <div class="qr-wrapper" style="background: white; padding: 20px; border-radius: 16px; display: inline-block; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=tamilpuligal@upi&pn=Tamil+Puligal+Katchi" alt="UPI QR Code" style="width: 250px; height: 250px; display: block;" />
+              <div style="margin-top: 15px; font-weight: bold; color: #1a237e; border-top: 1px dashed #ccc; padding-top: 10px;">SCAN TO PAY</div>
+            </div>
+            <p class="upi-id" style="margin-top: 25px; font-weight: 700; font-family: monospace; font-size: 1.4em; color: #333; background: #f5f5f5; display: inline-block; padding: 8px 20px; border-radius: 8px; border: 1px solid #ddd;">tamilpuligal@upi</p>
+            <p class="qr-instruction" style="margin-top: 15px; color: #555; line-height: 1.6; font-size: 1.1em;">
+              எந்த UPI செயலியிலும் ஸ்கேன் செய்து நன்கொடை வழங்கலாம்<br>
+              <span style="font-size: 0.85em; opacity: 0.8;">Scan with any UPI app to donate</span>
+            </p>
+          </div>
+
+          <div class="payment-icons" style="justify-content: center; margin-top: 25px; font-size: 2em; color: #555; display: flex; gap: 20px; align-items: center;">
+            <i class="fab fa-google-pay" style="color: #616161;"></i>
+            <span style="font-weight: 800; font-style: italic; color: #5a2c91;">PhonePe</span>
+            <span style="font-weight: 700; color: #002970; background: #00baf2; padding: 2px 8px; border-radius: 4px; color: white; font-size: 0.6em; text-transform: uppercase;">Paytm</span>
+            <span class="upi-text" style="font-weight: bold; font-size: 0.7em;">BHIM UPI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT / FOOTER ======== -->
+  <footer id="contact" class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-flag-icon"><span>&#9733;</span></div>
+              <div>
+                <div class="footer-brand-tamil">தமிழ் புலிகள் கட்சி</div>
+                <div class="footer-brand-en">Tamil Puligal Katchi</div>
+              </div>
+            </div>
+            <p class="footer-tagline">சமத்துவமே நமது இலக்கு<br/><em>Equality is our goal.</em></p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>விரைவு இணைப்புகள் · Quick Links</h4>
+            <ul>
+              <li><a href="#home">முகப்பு · Home</a></li>
+              <li><a href="#ideology">சித்தாந்தம் · Ideology</a></li>
+              <li><a href="#leadership">தலைமை · Leadership</a></li>
+              <li><a href="#wings">அணிகள் · Wings</a></li>
+              <li><a href="#events">நிகழ்வுகள் · Events</a></li>
+              <li><a href="#media">ஊடகம் · Media</a></li>
+              <li><a href="#join">சேரு · Join</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>தொடர்பு · Contact Us</h4>
+            <ul class="contact-list">
+              <li><i class="fas fa-map-marker-alt"></i> தமிழ் புலிகள் கட்சி தலைமையகம், நாகை – 611 001</li>
+              <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+              <li><i class="fas fa-envelope"></i> info@tamilpuligalkatchi.in</li>
+              <li><i class="fas fa-globe"></i> www.tamilpuligalkatchi.in</li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>செய்திகள் பெறுங்கள் · Stay Updated</h4>
+            <p>கட்சியின் சமீபத்திய செய்திகளை உங்கள் கைபேசியில் பெறுங்கள்.</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+              <input type="tel" placeholder="+91 கைபேசி / Phone" />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div class="whatsapp-join">
+              <a href="#" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp குழுவில் சேரு · Join Group
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>© 2026 தமிழ் புலிகள் கட்சி · Tamil Puligal Katchi. All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">தனியுரிமை · Privacy</a>
+            <a href="#">விதிமுறைகள் · Terms</a>
+            <a href="#">உட்பொருள் · Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+      <h3 id="modalTitle">நன்றி! Thank You!</h3>
+      <p id="modalMsg">நீங்கள் இயக்கத்தில் சேர்ந்துள்ளீர்கள்!</p>
+      <button onclick="closeModal()" class="btn btn-primary">சரி · OK</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
